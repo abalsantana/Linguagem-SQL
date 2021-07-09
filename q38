@@ -1,0 +1,24 @@
+<?php
+/*38. Em um curso de Ciência da Computação a nota do estudante é calculada a partir de três notas atribuídas,
+respectivamente, a um trabalho de laboratório, a uma avaliação semestral e a um exame final. As notas variam, de 0
+a 10 e a nota final é a média ponderada das três notas mencionadas. A tabela abaixo fornece os pesos:
+Laboratório Peso 2
+Avaliação semestral Peso 3
+Exame final Peso 5*/
+
+define('LAB', 2);
+define('AVS', 3);
+define('EXF', 5);
+
+function calcNotaEst($trab, $av1, $exFinal){
+	$notaFinal = (($trab * LAB) + ($av1 * AVS) + ($exFinal * EXF))/(LAB + AVS + EXF);
+	return $notaFinal;
+}
+
+$trab = readline("Digite a nota do trabalho: ");
+$av1 = readline("Digite a nota da AV1: ");
+$exFinal = readline("Digite a nota da Exame Final: ");
+
+$nFinal = calcNotaEst($trab, $av1, $exFinal);
+
+echo "Nota Final: ".$nFinal;

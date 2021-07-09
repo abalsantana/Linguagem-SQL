@@ -1,0 +1,20 @@
+<?php
+/*13. Faça um algoritmo que receba um número e mostre uma mensagem caso este número seja maior que 10.*/
+
+$num = readline("Informe um numero: ");
+
+//função mostra uma msg se um numero é > 10
+function mostraMens($num){
+	if($num > 10){
+	echo "$num é maior que 10!";
+	}else {
+		echo ":(";
+	}
+}
+
+ mostraMens($num);
+
+
+echo "\n------------------------------\n";
+
+?>

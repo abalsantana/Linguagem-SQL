@@ -1,0 +1,23 @@
+<?php
+/*30.Faça um algoritmo que receba o nome a idade, o sexo e salário fixo de um funcionário. Mostre o nome e o salário
+líquido:*/
+
+define("INSS", 0.12);
+
+//calcula o SALARIO LIQUIDO
+function calcSalLiquido($salFixo){
+	global $inss;
+	return $salFixo - ($salFixo * INSS);
+}
+
+$nome = readline("\ndigite seu nome: \n");
+$idade = readline("\ndigite sua idade: \n");
+$salFixo = readline("\ndigite seu salario fixo: \n");
+
+
+	
+$salLiquido = calcSalLiquido($salFixo);
+
+echo "\nSalário Líquido: $salLiquido\n";
+
+

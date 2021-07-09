@@ -1,0 +1,19 @@
+<?php
+/*7. Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é:
+F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.*/
+
+$grausC = readline("Informe a temperatura em graus ºC: ");
+
+//função converte graus C para ºF
+function conveteTemp($grausC){
+	return $grausF = ( 9 * $grausC + 160 ) / 5;
+}
+
+ $fahrenheit = conveteTemp($grausC);
+
+ echo "Temperatura convertida: $fahrenheit ºF";
+
+
+echo "\n------------------------------\n";
+
+?>

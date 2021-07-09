@@ -1,0 +1,11 @@
+/*31. Escrever um algoritmo que leia três valores inteiros distintos e os escreva em ordem crescente.*/
+
+
+
+$num1 = readline("Digite o numero 1: ");
+$num2 = readline("Digite o numero 2: ");
+$num3 = readline("Digite o numero 3: ");
+
+$num = array ($num1, $num2, $num3);
+sort($num);
+print_r ($num);

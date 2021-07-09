@@ -1,0 +1,51 @@
+<?php
+/*2. Faça um algoritmo que receba dois números e ao final mostre a soma, subtração, multiplicação e a divisão dos
+números lidos.*/
+
+
+$n1 = readline("Digite um valor para n1: ");
+$n2 = readline("Digite um valor para n2: ");
+
+//função soma
+function somar($n1, $n2){
+	 return $n1 + $n2;
+}
+
+$soma = somar($n1, $n2);
+
+echo "Resultado da Soma:  $soma";
+
+echo "\n------------------------------\n";
+
+//função subtração
+function subtracao($n1, $n2){
+	 return $n1 - $n2;
+}
+
+$diminuir = subtracao($n1, $n2);
+
+echo "Resultado da Subtração: $diminuir";
+
+echo "\n------------------------------\n";
+
+//função multiplicaçao
+function multiplicacao($n1, $n2){
+	 return $n1 * $n2;
+}
+
+$multiplicar = multiplicacao($n1, $n2);
+
+echo "Resultado da Subtração: $multiplicar";
+
+echo "\n------------------------------\n";
+
+//função divisão
+function divisao($n1, $n2){
+	 return $n1 / $n2;
+}
+
+$dividir = divisao($n1, $n2);
+
+echo "Resultado da Subtração: $dividir";
+
+?>

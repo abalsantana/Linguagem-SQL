@@ -1,0 +1,30 @@
+<?php
+/*34. A escola “APRENDER” faz o pagamento de seus professores por hora/aula. Faça um algoritmo que calcule e exiba o
+salário de um professor. Sabe-se que o valor da hora/aula segue a tabela abaixo:
+Professor Nível 1 R$12,00 por hora/aula
+Professor Nível 2 R$17,00 por hora/aula
+Professor Nível 3 R$25,00 por hora/aula*/
+
+define("NIVEL1", 12.00);
+define("NIVEL2", 17.00);
+define("NIVEL3", 25.00);
+
+
+
+function calcSalario($horastrabalhadas, $nivel){
+	if($nivel == 1){
+		$salario = $horastrabalhadas * NIVEL1;
+	}else if($nivel == 2){
+		$salario = $horastrabalhadas * NIVEL2;
+	}else{
+		$salario = $horastrabalhadas * NIVEL3;
+	}
+	return $salario;
+}
+
+$horastrabalhadas = readline("Digite suas horas trabalhadas no mês: ");
+$nivel = readline("Digite o nível 1, 2, 3: ");
+
+$sal = calcSalario($horastrabalhadas, $nivel);
+
+echo 'Salário: ' .$sal;

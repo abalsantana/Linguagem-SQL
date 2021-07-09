@@ -1,0 +1,29 @@
+<?php
+/*19. Escrever um algoritmo que leia o nome e o sexo de 56 pessoas e informe o nome e se ela é homem ou mulher. No
+final informe total de homens e de mulheres.*/
+
+
+
+	$countMasc = $countFem = 0;
+	
+	for($i=1; $i<=56; $i++){
+		$nome[$i] = readline("\nDigite um nome da pessoa $i: ");
+		$sexo[$i] = readline("\nDigite o sexo da pessoa $i: ");
+
+		if($sexo[$i] == "Masculino"){
+			echo "$nome[$i] é do sexo $sexo[$i].";
+			echo "\n------------------------------\n";
+				$countMasc++;
+		}else{
+				echo "$nome[$i] é do sexo $sexo[$i].";
+				echo "\n------------------------------\n";
+				$countFem++;
+		}
+	}
+
+	echo "\nTotal de Homens: $countMasc";
+	echo "\nTotal de Mulheres: $countFem";
+
+echo "\n------------------------------\n";
+
+?>

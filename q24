@@ -1,0 +1,41 @@
+<?php
+/*24. Faça um algoritmo que receba “N” números e mostre positivo, negativo ou zero para cada número.*/
+
+
+$num = readLine("Digite um número positivo ou negativo qualquer e -1 para sair: ");
+
+while($num != -1){
+	if($num > 0){
+		echo "-----------------------------\n\n";
+		echo "Número Positivo!\n\n";
+		echo "-----------------------------\n\n";
+	}else if($num == 0){
+		echo "-----------------------------\n\n";
+		echo "Número igual 0 (Zero)!\n\n";
+		echo "-----------------------------\n\n";
+	}else{
+		echo "-----------------------------\n\n";
+		echo "Número Negativo!\n\n";
+		echo "-----------------------------\n\n";
+	}
+	$num = readLine("Digite um número positivo ou negativo qualquer e -1 para sair: ");
+	
+}
+
+echo"FIM";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

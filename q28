@@ -1,0 +1,72 @@
+<?php
+/*28. Escrever um algoritmo para uma empresa que decide dar um reajuste a seus 584 funcionários de acordo com os
+seguintes critérios:
+a) 50% para aqueles que ganham menos do que três salários mínimos;
+b) 20% para aqueles que ganham entre três até dez salários mínimos;
+c) 15% para aqueles que ganham acima de dez até vinte salários mínimos;
+d) 10% para os demais funcionários.
+Leia o nome do funcionário, seu salário e o valor do salário mínimo. Calcule o seu novo salário reajustado. Escrever o
+nome do funcionário, o reajuste e seu novo salário. Calcule quanto à empresa vai aumentar sua folha de pagamento.*/
+
+
+$func = 1;
+$contSal = 0;
+$totSal = 0;
+$totSalNovo = 0;
+$totReaj = 0;
+
+//calcula o novo salario
+function calcNovoSal($sal, $salMin){
+	if($sal < (3 * $salMin)){
+		return $sal * 1.5;
+	}else if($sal > (3 * $salMin) && $sal < (10 * $salMin)){
+		return $sal * 1.2;
+	}else if($sal > (10 * $salMin) && $sal < (20 * $salMin)){
+		return $sal * 1.15;
+	}else{
+		return $sal * 1.10;
+	}
+}
+
+function calcReajuste($sal, $salMin){
+	if($sal < (3 * $salMin)){
+		return $sal * 0.5;
+	}else if($sal > (3 * $salMin) && $sal < (10 * $salMin)){
+		return $sal * 0.2;
+	}else if($sal > (10 * $salMin) && $sal < (20 * $salMin)){
+		return $sal * 0.15;
+	}else{
+		return $sal * 0.10;
+	}
+}
+
+
+
+
+while ($func <= 584){
+	$nome = readline("\nFuncionário $func, digite seu nome: \n");
+	$sal = readline("\nFuncionário $func, digite o salário: \n");
+	$contSal++;
+	$totSal += $sal * $contSal;
+	$salMin = readline("\nFuncionário $func, digite o salário mínimo: \n");
+	$novoSal = calcNovoSal($sal, $salMin);
+	$totSalNovo += $novoSal * $contSal;
+	$reajuste = calcReajuste($sal, $salMin);
+	$totReaj += $reajuste;
+	echo "$nome, seu novo salário é: R$ $novoSal\n";
+	echo "$nome, você recebeu um reajuste no valor de: R$ $reajuste \n\n";
+
+	$func++;
+}
+
+
+$aumFolhaPgto = $totSalNovo - $totSal;
+
+echo "\n--------------------------------------------";
+
+echo "\nAumento da folha: R$ $totReaj";
+
+echo "\n--------------------------------------------";
+	
+
+echo"\nFIM";

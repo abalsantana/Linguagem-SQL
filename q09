@@ -1,0 +1,20 @@
+<?php
+/*9. Faça um algoritmo que receba um valor que foi depositado e exiba o valor com rendimento após um mês.
+Considere fixo o juro da poupança em 0,70% a. m.*/
+
+$valorDepositado = readline("Informe o valor depositado: ");
+
+//função calcula juros após um mês
+function calcJursoMes(){
+	global $valorDepositado;
+	return $valorDepositado * (0.70/100);
+}
+
+ $valorComRend = calcJursoMes() + $valorDepositado;
+
+ echo "Valor com rendimento após 1 mês: R$ $valorComRend";
+
+
+echo "\n------------------------------\n";
+
+?>

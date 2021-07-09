@@ -1,0 +1,69 @@
+<?php
+/*39. Dado o nome de um estudante, com o respectivo número de matrícula e as três notas acima mencionadas,
+desenvolva um algoritmo para calcular a nota final e a classificação de cada estudante. A classificação é dada
+conforme a tabela abaixo:
+Nota Final Classificação
+[8,10] A
+[7,8] B
+[6,7] C
+[5,6] D
+[0,5] R
+Imprima o nome do estudante, com o seu número, nota final e classificação.*/
+
+define('LAB', 2);
+define('AVS', 3);
+define('EXF', 5);
+
+//função que calcula notas dos alunos
+function calcNotaEst($trab, $av1, $exFinal){
+	$notaFinal = (($trab * LAB) + ($av1 * AVS) + ($exFinal * EXF))/(LAB + AVS + EXF);
+	return $notaFinal;
+}
+
+
+$cont = 1;
+$nAlunos = readline("Digite a quantidade de alunos: ");
+
+while($cont <= $nAlunos){
+
+$nome = readline("\nDigite o nome do aluno $cont: ");
+$mat = readline("Digite a matrícula do aluno $cont: ");
+$trab = readline("Digite a nota do trabalho do aluno $cont: ");
+$av1 = readline("Digite a nota da AV1 do aluno $cont: ");
+$exFinal = readline("Digite a nota da Exame Final do aluno $cont: ");
+
+$nFinal = calcNotaEst($trab, $av1, $exFinal);
+
+if($nFinal >= 0.0 && $nFinal <= 5.0){
+	echo "\nNome do aluno $cont: ".$nome;
+	echo "\nmatricula do aluno $cont: ".$mat;
+	echo "\nNota Final do aluno $cont: ".$nFinal;
+	echo "\nClassificação R\n\n";
+}else if($nFinal > 5.0 && $nFinal <= 6.0){
+	echo "\nNome do aluno $cont: ".$nome;
+	echo "\nmatricula do aluno $cont: ".$mat;
+	echo "\nNota Final do aluno $cont: ".$nFinal;
+	echo "\nClassificação D\n\n";
+}else if($nFinal > 6.0 && $nFinal <= 7.0){
+	echo "\nNome do aluno $cont: ".$nome;
+	echo "\nmatricula do aluno $cont: ".$mat;
+	echo "\nNota Final do aluno $cont: ".$nFinal;
+	echo "\nClassificação C\n\n";
+}else if($nFinal > 7.0 && $nFinal <= 8.0){
+	echo "\nNome do aluno $cont: ".$nome;
+	echo "\nmatricula do aluno $cont: ".$mat;
+	echo "\nNota Final do aluno $cont: ".$nFinal;
+	echo "\nClassificação B\n\n";
+}else{
+	echo "\nNome do aluno $cont: ".$nome;
+	echo "\nmatricula do aluno $cont: ".$mat;
+	echo "\nNota Final do aluno $cont: ".$nFinal;
+	echo "\nClassificação A\n\n";
+}
+
+
+$cont++;
+
+}
+
+

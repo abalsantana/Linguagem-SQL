@@ -1,0 +1,38 @@
+<?php
+/*25. Faça um algoritmo que leia dois números e identifique se são iguais ou diferentes. Caso eles sejam iguais imprima
+uma mensagem dizendo que eles são iguais. Caso sejam diferentes, informe qual número é o maior, e uma
+mensagem que são diferentes.*/
+
+
+$num1 = readLine("Digite um número 1: ");
+$num2 = readLine("Digite um número 2: ");
+
+	if($num1 == $num2){
+		echo "São iguais!\n";
+	}else{
+			if($num1 > $num2){
+				echo "Número 1: $num1 é maior que o numero 2 que é $num2.\n";
+			}else{
+				echo "Número 2: $num2 é maior que o numero 1 que é $num1.\n";
+			}
+	}
+
+	
+
+echo"FIM";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<?php
+/*29. Faça um algoritmo que receba o número do mês e mostre o mês correspondente. Valide mês inválido.*/
+
+$num = 1;
+
+//calcula o mês correspondente
+function mesCorresp($mes){
+	if($mes == 1) echo "Janeiro";
+	if($mes == 2) echo "Fevereiro";
+	if($mes == 3) echo "Março";
+	if($mes == 4) echo "Abril";
+	if($mes == 5) echo "Maio";
+	if($mes == 6) echo "Junho";
+	if($mes == 7) echo "Julho";
+	if($mes == 8) echo "Agosto";
+	if($mes == 9) echo "Setembro";
+	if($mes == 10) echo "Outubro";
+	if($mes == 11) echo "Novembro";
+	if($mes == 12) echo "Dezembro";
+}
+
+while ($num <= 12){
+	$mes = readline("\ndigite um numero de 1 a 12 correspondente ao mês: \n");
+	
+	$mesCorresp = mesCorresp($mes);
+
+	echo "\n$mesCorresp\n";
+
+	$num++;
+}
+
+
+
+echo"\nFIM";

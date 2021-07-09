@@ -1,0 +1,7 @@
+<?php
+//1. Faça um algoritmo que receba dois números e exiba o resultado da sua soma.
+$n1 = 5.9;
+$n2 = 8;
+$soma = $n1 + $n2;
+echo "Resultado da Soma: " + $soma;
+?>

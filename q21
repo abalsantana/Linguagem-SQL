@@ -1,0 +1,31 @@
+<?php
+
+/*21. Escrever um algoritmo que leia os dados de “N” pessoas (nome, sexo, idade e saúde) e informe se está apta ou não
+para cumprir o serviço militar obrigatório. Informe os totais.
+*/
+
+//classe pessoa
+class Pessoa{
+	var $nome = readline("Informe o Nome: ");
+	var $sexo = readline("Informe o sexo: ");
+	var $idade = readline("Informe a idade: ");
+	var $saude = readline("Informe a saúde: ");
+
+	function aptaOuNao($idade, $saude){
+		if($idade >= 18 && $saude == true){
+			echo "Apto!";
+		}else{
+			echo "Inapto!";
+		}
+	}
+}
+
+//instanciando um objeto
+
+$pessoa = new Pessoa();
+
+
+
+echo $pessoa.$nome;
+
+?>

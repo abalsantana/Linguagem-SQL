@@ -1,0 +1,59 @@
+<?php
+/*22. Faça um algoritmo que receba o preço de custo e o preço de venda de 40 produtos. Mostre como resultado se
+houve lucro, prejuízo ou empate para cada produto. Informe media de preço de custo e do preço de venda.*/
+
+$n = 1;
+$contPrecoCusto = 0;
+$contPrecoVenda = 0;
+$totPrecoVenda = 0;
+$totPrecoCusto = 0;
+
+
+while($n<=40){
+
+$precoCusto = readLine("Informe o preço de custo do produto $n: ");
+$contPrecoCusto++;
+$totPrecoCusto += $precoCusto;
+
+$precoVenda = readLine("Informe o preço de venda do produto $n: ");
+$contPrecoVenda++;
+$totPrecoVenda += $precoVenda;
+
+//Decisão
+	if($precoVenda > $precoCusto){
+		$lucro = $precoVenda - $precoCusto;
+		echo "Lucro: R$$lucro\n\n";
+	}else if($precoVenda == $precoCusto){
+		echo "Empate!\n\n";
+	}else{
+		$preju = ($precoVenda - $precoCusto) * -1;
+		echo "Prejuízo: R$$preju\n\n";
+		echo "-----------------------------\n\n";
+	}
+	$n++;
+}
+
+$mediaPrecoVenda = $totPrecoVenda / $contPrecoVenda;
+
+$mediaPrecoCusto = $totPrecoCusto / $contPrecoCusto;
+
+echo "\n----------------Resultados---------------\n";
+
+echo "\nMédia do Preço de Venda: $mediaPrecoVenda\n";
+echo "Média do Preço de Custo: $mediaPrecoCusto";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

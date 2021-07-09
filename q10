@@ -1,0 +1,19 @@
+<?php
+/*10. A Loja Mamão com Açúcar está vendendo seus produtos em 5 (cinco) prestações sem juros. Faça um algoritmo que
+receba um valor de uma compra e mostre o valor das prestações.*/
+
+$valor = readline("Informe o valor: ");
+
+//função calcula juros após um mês
+function calcPrestacoes($valor){
+	return $valor / 5;
+}
+
+ $valorPrestacoes = calcPrestacoes($valor);
+
+ echo "Valor de cada prestação: R$ $valorPrestacoes";
+
+
+echo "\n------------------------------\n";
+
+?>

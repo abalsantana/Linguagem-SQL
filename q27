@@ -1,0 +1,73 @@
+<?php
+/*27. A concessionária de veículos “CARANGO” está vendendo os seus veículos com desconto. Faça um algoritmo que
+calcule e exiba o valor do desconto e o valor a ser pago pelo cliente. O desconto deverá ser calculado sobre o valor
+do veículo de acordo com o combustível (álcool – 25%, gasolina – 21% ou diesel –14%). Com valor do veículo zero
+encerra entrada de dados. Informe total de desconto e total pago pelos clientes.*/
+
+$valorCarro = 10000.00;
+$n = 1;
+$tipo = 0;
+$contCarTip1 = 0;
+$contCarTip2 = 0;
+$contCarTip3 = 0;
+$totalPagoPelosClientes = 0;
+$totalGeralDesc = 0;
+
+
+
+//calcula o desconto
+function calculaDesconto($valorCarro, $perc){
+	$desconto = ($valorCarro * $perc);
+	return $desconto;
+}
+
+//calcula valor a pagar
+function valorPagar($valorCarro, $perc){
+	$desc = calculaDesconto($valorCarro, $perc);
+	$ValorAPagar = $valorCarro - $desc;
+	return $ValorAPagar;
+}
+
+$tipo = readline("\nPessoa $n, digite qual carro deseja comprar pelo tipo de combustível: (1-Álcool), (2-Galolina), (3-Diesel) ou (0 - Sair) para sair: \n\n");
+
+while ($tipo > 0){
+	if($tipo == 1){
+		$contCarTip1++;
+		$desconto = calculaDesconto($valorCarro, 0.25);
+		$ValorAPagar = valorPagar($valorCarro, 0.25);
+		$totalPagoPelosClientes += $ValorAPagar * $contCarTip1;
+		$totalGeralDesc += $desconto * $contCarTip1;
+	}else if($tipo == 2){
+		$contCarTip2++;
+		$desconto = calculaDesconto($valorCarro, 0.21);
+		$ValorAPagar = valorPagar($valorCarro, 0.21);
+		$totalPagoPelosClientes += $ValorAPagar * $contCarTip2;
+		$totalGeralDesc += $desconto * $contCarTip2;
+	}else if($tipo == 3){
+		$contCarTip3++;
+		$desconto = calculaDesconto($valorCarro, 0.14);
+		$ValorAPagar = valorPagar($valorCarro, 0.14);
+		$totalPagoPelosClientes += $ValorAPagar * $contCarTip3;
+		$totalGeralDesc += $desconto * $contCarTip3;
+	}else{
+		echo "\nDigite uma opção válida!\n\n";
+		break;
+	}
+
+	echo "\nValor total dos Desconto: R$ $desconto";
+	echo "\nValor total a pagar: R$ $ValorAPagar\n\n";
+
+	$n++;
+	$tipo = readline("\nPessoa $n, digite qual carro deseja comprar pelo tipo de combustível: (1-Álcool), (2-Galolina), (3-Diesel) ou (0 - Sair) para sair: \n");
+
+}
+
+echo "\n--------------------------------------------";
+
+echo "\nTotal Geral dos desconto: R$ $totalGeralDesc ";
+echo "\nTotal Geral pago pelos clientes: $totalPagoPelosClientes";
+
+echo "\n--------------------------------------------";
+	
+
+echo"\nFIM";

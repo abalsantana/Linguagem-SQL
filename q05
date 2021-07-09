@@ -1,0 +1,22 @@
+<?php
+/*5. Escrever um algoritmo que leia o nome de um aluno e as notas das três provas que ele obteve no semestre. No final
+informar o nome do aluno e a sua média (aritmética).*/
+
+$aluno = readline("Informe seu nome: ");
+$nota1 = readline("Informe a nota 1: ");
+$nota2 = readline("Informe a nota 2: ");
+$nota3 = readline("Informe a nota 3: ");
+
+//função calcula media aritimética do aluno
+function calcMediaArit(){
+	global $nota1, $nota2, $nota3;
+	return ($nota1 + $nota2 + $nota3)/3;
+}
+
+$mediaArit = calcMediaArit($nota1, $nota2, $nota3);
+
+echo "\nMédia Final do Aluno $aluno: $mediaArit";
+
+echo "\n------------------------------\n";
+
+?>

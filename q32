@@ -1,0 +1,31 @@
+<?php
+/*32. Dados três valores A, B e C, em que A e B são números reais e C é um caractere, pede-se para imprimir o resultado
+da operação de A por B se C for um símbolo de operador aritmético; caso contrário deve ser impressa uma
+mensagem de operador não definido. Tratar erro de divisão por zero.*/
+
+
+
+$A = readline("Digite um número A real: ");
+$B = readline("Digite um número B real: ");
+$C = readline("Digite um operador aritmético: ");
+
+if($C == '/'){
+	$resultado = $A / $B;
+	echo 'Resultado: ' .$resultado;
+}else if($C == '+'){
+	$resultado = $A + $B;
+	echo 'Resultado: ' .$resultado;
+	
+}else if($C == '-'){
+	$resultado = $A - $B;
+	echo 'Resultado: ' .$resultado;
+}else if($C == '*'){
+	$resultado = $A * $B;
+	echo 'Resultado: ' .$resultado;
+}else{
+	echo "Operador não definido!";
+}
+
+
+
+

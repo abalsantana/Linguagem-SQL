@@ -1,0 +1,22 @@
+<?php
+/*15. Faça um algoritmo que receba um número e diga se este número está no intervalo entre 100 e 200.*/
+
+
+$num = readline("Informe um numero: ");
+
+//função mostra se este número está no intervalo entre 100 e 200
+function numIntervalo($num){
+	global $maior;
+	if($num > 100 && $num < 200){
+		echo "Está no intervalo entre 100 e 200.";
+}else {
+	echo "Não está no intervalo entre 100 e 200.";
+}
+
+}
+
+ numIntervalo($num);
+
+echo "\n------------------------------\n";
+
+?>

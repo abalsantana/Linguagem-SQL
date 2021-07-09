@@ -1,0 +1,33 @@
+<?php
+/*23. Faça um algoritmo que receba um número e mostre uma mensagem caso este número sege maior que 80, menor
+que 25 ou igual a 40.*/
+$num = readLine("Digite um número para continuar e -1 para sair: ");
+
+while($num > 0){
+	if($num < 25){
+		echo "Número pequeno menor que 25!\n\n";
+	}if($num == 40){
+		echo "Número igual a 40!\n\n";
+	}if($num > 80){
+		echo "Número grande maior que 80!\n\n";
+	}
+	$num = readLine("\nDigite um número para continuar e 0 para sair: ");
+}
+
+echo"FIM";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
